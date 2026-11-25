@@ -1,0 +1,1370 @@
+{
+  "tool": "bufferbench",
+  "version": "0.1.0",
+  "defaultModel": "davies",
+  "gate": 0.025,
+  "models": [
+    {
+      "model": "davies",
+      "standards": [
+        {
+          "id": "srm185i",
+          "name": "Potassium hydrogen phthalate, 0.05 mol/kg",
+          "source": "NIST SRM 185i certificate, Table 1 (issued 24 July 2025)",
+          "covers": "diprotic carboxylic acid, amphoteric salt, I ≈ 0.05",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.0533,
+          "points": [
+            {
+              "t": 5,
+              "certified": 4.003,
+              "computed": 4.0123,
+              "delta": 0.0093
+            },
+            {
+              "t": 10,
+              "certified": 3.999,
+              "computed": 4.0077,
+              "delta": 0.0087
+            },
+            {
+              "t": 15,
+              "certified": 3.999,
+              "computed": 4.0063,
+              "delta": 0.0073
+            },
+            {
+              "t": 20,
+              "certified": 4.001,
+              "computed": 4.0079,
+              "delta": 0.0069
+            },
+            {
+              "t": 25,
+              "certified": 4.005,
+              "computed": 4.0121,
+              "delta": 0.0071
+            },
+            {
+              "t": 30,
+              "certified": 4.012,
+              "computed": 4.0189,
+              "delta": 0.0069
+            },
+            {
+              "t": 35,
+              "certified": 4.021,
+              "computed": 4.028,
+              "delta": 0.007
+            },
+            {
+              "t": 37,
+              "certified": 4.025,
+              "computed": 4.0323,
+              "delta": 0.0073
+            },
+            {
+              "t": 40,
+              "certified": 4.031,
+              "computed": 4.0393,
+              "delta": 0.0083
+            },
+            {
+              "t": 45,
+              "certified": 4.044,
+              "computed": 4.0527,
+              "delta": 0.0087
+            },
+            {
+              "t": 50,
+              "certified": 4.058,
+              "computed": 4.068,
+              "delta": 0.01
+            }
+          ],
+          "maxAbs": 0.01,
+          "mean": 0.008
+        },
+        {
+          "id": "srm186-1to1",
+          "name": "KH₂PO₄ 0.025 + Na₂HPO₄ 0.025 mol/kg",
+          "source": "NIST SRM 186-I-g / 186-II-g certificate, Table 1 (issued 23 May 2003; from the NIST certificate archive)",
+          "covers": "phosphate H₂PO₄⁻/HPO₄²⁻ (charge −1/−2), I ≈ 0.10",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.1,
+          "points": [
+            {
+              "t": 5,
+              "certified": 6.9515,
+              "computed": 6.9615,
+              "delta": 0.01
+            },
+            {
+              "t": 10,
+              "certified": 6.9229,
+              "computed": 6.9338,
+              "delta": 0.0109
+            },
+            {
+              "t": 15,
+              "certified": 6.8989,
+              "computed": 6.9105,
+              "delta": 0.0116
+            },
+            {
+              "t": 20,
+              "certified": 6.8796,
+              "computed": 6.8914,
+              "delta": 0.0118
+            },
+            {
+              "t": 25,
+              "certified": 6.864,
+              "computed": 6.8763,
+              "delta": 0.0123
+            },
+            {
+              "t": 30,
+              "certified": 6.8526,
+              "computed": 6.8647,
+              "delta": 0.0121
+            },
+            {
+              "t": 35,
+              "certified": 6.8435,
+              "computed": 6.8565,
+              "delta": 0.013
+            },
+            {
+              "t": 37,
+              "certified": 6.8408,
+              "computed": 6.8542,
+              "delta": 0.0134
+            },
+            {
+              "t": 40,
+              "certified": 6.8372,
+              "computed": 6.8516,
+              "delta": 0.0144
+            },
+            {
+              "t": 45,
+              "certified": 6.8346,
+              "computed": 6.8495,
+              "delta": 0.0149
+            },
+            {
+              "t": 50,
+              "certified": 6.8331,
+              "computed": 6.8503,
+              "delta": 0.0172
+            }
+          ],
+          "maxAbs": 0.0172,
+          "mean": 0.0129
+        },
+        {
+          "id": "srm186-1to3.5",
+          "name": "KH₂PO₄ 0.008695 + Na₂HPO₄ 0.03043 mol/kg",
+          "source": "NIST SRM 186-I-g / 186-II-g certificate, Table 2 (issued 23 May 2003; from the NIST certificate archive)",
+          "covers": "phosphate at a 1:3.5 ratio, I ≈ 0.10",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.1,
+          "points": [
+            {
+              "t": 5,
+              "certified": 7.5026,
+              "computed": 7.5054,
+              "delta": 0.0028
+            },
+            {
+              "t": 10,
+              "certified": 7.4747,
+              "computed": 7.4777,
+              "delta": 0.003
+            },
+            {
+              "t": 15,
+              "certified": 7.4511,
+              "computed": 7.4545,
+              "delta": 0.0034
+            },
+            {
+              "t": 20,
+              "certified": 7.4323,
+              "computed": 7.4354,
+              "delta": 0.0031
+            },
+            {
+              "t": 25,
+              "certified": 7.4157,
+              "computed": 7.4202,
+              "delta": 0.0045
+            },
+            {
+              "t": 30,
+              "certified": 7.4044,
+              "computed": 7.4086,
+              "delta": 0.0042
+            },
+            {
+              "t": 35,
+              "certified": 7.3956,
+              "computed": 7.4004,
+              "delta": 0.0048
+            },
+            {
+              "t": 37,
+              "certified": 7.394,
+              "computed": 7.3981,
+              "delta": 0.0041
+            },
+            {
+              "t": 40,
+              "certified": 7.3897,
+              "computed": 7.3954,
+              "delta": 0.0057
+            },
+            {
+              "t": 45,
+              "certified": 7.387,
+              "computed": 7.3934,
+              "delta": 0.0064
+            },
+            {
+              "t": 50,
+              "certified": 7.3848,
+              "computed": 7.3941,
+              "delta": 0.0093
+            }
+          ],
+          "maxAbs": 0.0093,
+          "mean": 0.0047
+        },
+        {
+          "id": "srm187e",
+          "name": "Borax (Na₂B₄O₇·10H₂O), 0.01 mol/kg",
+          "source": "NIST SRM 187e certificate, Tables 1–2 (issued 30 May 2014)",
+          "covers": "boric acid / borate (charge 0/−1), I ≈ 0.02",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.02,
+          "points": [
+            {
+              "t": 5,
+              "certified": 9.3934,
+              "computed": 9.3833,
+              "delta": -0.0101
+            },
+            {
+              "t": 10,
+              "certified": 9.3328,
+              "computed": 9.3231,
+              "delta": -0.0097
+            },
+            {
+              "t": 15,
+              "certified": 9.2784,
+              "computed": 9.2687,
+              "delta": -0.0097
+            },
+            {
+              "t": 20,
+              "certified": 9.2295,
+              "computed": 9.2198,
+              "delta": -0.0097
+            },
+            {
+              "t": 25,
+              "certified": 9.1855,
+              "computed": 9.1761,
+              "delta": -0.0094
+            },
+            {
+              "t": 30,
+              "certified": 9.1459,
+              "computed": 9.1372,
+              "delta": -0.0087
+            },
+            {
+              "t": 35,
+              "certified": 9.1099,
+              "computed": 9.1028,
+              "delta": -0.0071
+            },
+            {
+              "t": 37,
+              "certified": 9.0965,
+              "computed": 9.0902,
+              "delta": -0.0063
+            },
+            {
+              "t": 40,
+              "certified": 9.0772,
+              "computed": 9.0726,
+              "delta": -0.0046
+            },
+            {
+              "t": 45,
+              "certified": 9.0472,
+              "computed": 9.0463,
+              "delta": -0.0009
+            },
+            {
+              "t": 50,
+              "certified": 9.0195,
+              "computed": 9.0237,
+              "delta": 0.0042
+            }
+          ],
+          "maxAbs": 0.0101,
+          "mean": -0.0065
+        },
+        {
+          "id": "srm191d",
+          "name": "NaHCO₃ 0.025 + Na₂CO₃ 0.025 mol/kg",
+          "source": "NIST SRM 191d certificate, Table 1 (issued 5 February 2025)",
+          "covers": "carbonate HCO₃⁻/CO₃²⁻ (charge −1/−2), I ≈ 0.10",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.0999,
+          "points": [
+            {
+              "t": 10,
+              "certified": 10.179,
+              "computed": 10.1675,
+              "delta": -0.0115
+            },
+            {
+              "t": 15,
+              "certified": 10.118,
+              "computed": 10.1073,
+              "delta": -0.0107
+            },
+            {
+              "t": 20,
+              "certified": 10.063,
+              "computed": 10.0526,
+              "delta": -0.0104
+            },
+            {
+              "t": 25,
+              "certified": 10.014,
+              "computed": 10.0031,
+              "delta": -0.0109
+            },
+            {
+              "t": 30,
+              "certified": 9.968,
+              "computed": 9.9582,
+              "delta": -0.0098
+            },
+            {
+              "t": 35,
+              "certified": 9.926,
+              "computed": 9.9177,
+              "delta": -0.0083
+            }
+          ],
+          "maxAbs": 0.0115,
+          "mean": -0.0103
+        },
+        {
+          "id": "srm922-923",
+          "name": "Tris 0.01667 + Tris·HCl 0.0500 mol/kg",
+          "source": "NIST SRM 922 / 923 certificate (revision of 24 May 1993; from the NIST certificate archive), page 1",
+          "covers": "cationic acid TrisH⁺/Tris (charge +1/0), I ≈ 0.05",
+          "uncertainty": 0.005,
+          "ionicStrength": 0.05,
+          "points": [
+            {
+              "t": 0,
+              "certified": 8.471,
+              "computed": 8.4502,
+              "delta": -0.0208
+            },
+            {
+              "t": 5,
+              "certified": 8.303,
+              "computed": 8.2831,
+              "delta": -0.0199
+            },
+            {
+              "t": 10,
+              "certified": 8.142,
+              "computed": 8.123,
+              "delta": -0.019
+            },
+            {
+              "t": 15,
+              "certified": 7.988,
+              "computed": 7.9694,
+              "delta": -0.0186
+            },
+            {
+              "t": 20,
+              "certified": 7.84,
+              "computed": 7.822,
+              "delta": -0.018
+            },
+            {
+              "t": 25,
+              "certified": 7.699,
+              "computed": 7.6805,
+              "delta": -0.0185
+            },
+            {
+              "t": 30,
+              "certified": 7.563,
+              "computed": 7.5446,
+              "delta": -0.0184
+            },
+            {
+              "t": 35,
+              "certified": 7.433,
+              "computed": 7.4139,
+              "delta": -0.0191
+            },
+            {
+              "t": 37,
+              "certified": 7.382,
+              "computed": 7.3631,
+              "delta": -0.0189
+            },
+            {
+              "t": 40,
+              "certified": 7.307,
+              "computed": 7.2883,
+              "delta": -0.0187
+            },
+            {
+              "t": 45,
+              "certified": 7.186,
+              "computed": 7.1674,
+              "delta": -0.0186
+            },
+            {
+              "t": 50,
+              "certified": 7.07,
+              "computed": 7.0511,
+              "delta": -0.0189
+            }
+          ],
+          "maxAbs": 0.0208,
+          "mean": -0.019
+        }
+      ],
+      "n": 62,
+      "maxAbs": 0.0208,
+      "medianAbs": 0.0097,
+      "rms": 0.0117,
+      "withinUncertainty": 35
+    },
+    {
+      "model": "bates-guggenheim",
+      "standards": [
+        {
+          "id": "srm185i",
+          "name": "Potassium hydrogen phthalate, 0.05 mol/kg",
+          "source": "NIST SRM 185i certificate, Table 1 (issued 24 July 2025)",
+          "covers": "diprotic carboxylic acid, amphoteric salt, I ≈ 0.05",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.0533,
+          "points": [
+            {
+              "t": 5,
+              "certified": 4.003,
+              "computed": 4.0124,
+              "delta": 0.0094
+            },
+            {
+              "t": 10,
+              "certified": 3.999,
+              "computed": 4.0078,
+              "delta": 0.0088
+            },
+            {
+              "t": 15,
+              "certified": 3.999,
+              "computed": 4.0064,
+              "delta": 0.0074
+            },
+            {
+              "t": 20,
+              "certified": 4.001,
+              "computed": 4.008,
+              "delta": 0.007
+            },
+            {
+              "t": 25,
+              "certified": 4.005,
+              "computed": 4.0122,
+              "delta": 0.0072
+            },
+            {
+              "t": 30,
+              "certified": 4.012,
+              "computed": 4.019,
+              "delta": 0.007
+            },
+            {
+              "t": 35,
+              "certified": 4.021,
+              "computed": 4.0281,
+              "delta": 0.0071
+            },
+            {
+              "t": 37,
+              "certified": 4.025,
+              "computed": 4.0324,
+              "delta": 0.0074
+            },
+            {
+              "t": 40,
+              "certified": 4.031,
+              "computed": 4.0394,
+              "delta": 0.0084
+            },
+            {
+              "t": 45,
+              "certified": 4.044,
+              "computed": 4.0528,
+              "delta": 0.0088
+            },
+            {
+              "t": 50,
+              "certified": 4.058,
+              "computed": 4.0681,
+              "delta": 0.0101
+            }
+          ],
+          "maxAbs": 0.0101,
+          "mean": 0.0081
+        },
+        {
+          "id": "srm186-1to1",
+          "name": "KH₂PO₄ 0.025 + Na₂HPO₄ 0.025 mol/kg",
+          "source": "NIST SRM 186-I-g / 186-II-g certificate, Table 1 (issued 23 May 2003; from the NIST certificate archive)",
+          "covers": "phosphate H₂PO₄⁻/HPO₄²⁻ (charge −1/−2), I ≈ 0.10",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.1,
+          "points": [
+            {
+              "t": 5,
+              "certified": 6.9515,
+              "computed": 6.9552,
+              "delta": 0.0037
+            },
+            {
+              "t": 10,
+              "certified": 6.9229,
+              "computed": 6.9274,
+              "delta": 0.0045
+            },
+            {
+              "t": 15,
+              "certified": 6.8989,
+              "computed": 6.9041,
+              "delta": 0.0052
+            },
+            {
+              "t": 20,
+              "certified": 6.8796,
+              "computed": 6.885,
+              "delta": 0.0054
+            },
+            {
+              "t": 25,
+              "certified": 6.864,
+              "computed": 6.8698,
+              "delta": 0.0058
+            },
+            {
+              "t": 30,
+              "certified": 6.8526,
+              "computed": 6.8582,
+              "delta": 0.0056
+            },
+            {
+              "t": 35,
+              "certified": 6.8435,
+              "computed": 6.85,
+              "delta": 0.0065
+            },
+            {
+              "t": 37,
+              "certified": 6.8408,
+              "computed": 6.8476,
+              "delta": 0.0068
+            },
+            {
+              "t": 40,
+              "certified": 6.8372,
+              "computed": 6.8449,
+              "delta": 0.0077
+            },
+            {
+              "t": 45,
+              "certified": 6.8346,
+              "computed": 6.8428,
+              "delta": 0.0082
+            },
+            {
+              "t": 50,
+              "certified": 6.8331,
+              "computed": 6.8435,
+              "delta": 0.0104
+            }
+          ],
+          "maxAbs": 0.0104,
+          "mean": 0.0063
+        },
+        {
+          "id": "srm186-1to3.5",
+          "name": "KH₂PO₄ 0.008695 + Na₂HPO₄ 0.03043 mol/kg",
+          "source": "NIST SRM 186-I-g / 186-II-g certificate, Table 2 (issued 23 May 2003; from the NIST certificate archive)",
+          "covers": "phosphate at a 1:3.5 ratio, I ≈ 0.10",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.1,
+          "points": [
+            {
+              "t": 5,
+              "certified": 7.5026,
+              "computed": 7.4992,
+              "delta": -0.0034
+            },
+            {
+              "t": 10,
+              "certified": 7.4747,
+              "computed": 7.4714,
+              "delta": -0.0033
+            },
+            {
+              "t": 15,
+              "certified": 7.4511,
+              "computed": 7.4481,
+              "delta": -0.003
+            },
+            {
+              "t": 20,
+              "certified": 7.4323,
+              "computed": 7.429,
+              "delta": -0.0033
+            },
+            {
+              "t": 25,
+              "certified": 7.4157,
+              "computed": 7.4137,
+              "delta": -0.002
+            },
+            {
+              "t": 30,
+              "certified": 7.4044,
+              "computed": 7.4021,
+              "delta": -0.0023
+            },
+            {
+              "t": 35,
+              "certified": 7.3956,
+              "computed": 7.3938,
+              "delta": -0.0018
+            },
+            {
+              "t": 37,
+              "certified": 7.394,
+              "computed": 7.3915,
+              "delta": -0.0025
+            },
+            {
+              "t": 40,
+              "certified": 7.3897,
+              "computed": 7.3888,
+              "delta": -0.0009
+            },
+            {
+              "t": 45,
+              "certified": 7.387,
+              "computed": 7.3867,
+              "delta": -0.0003
+            },
+            {
+              "t": 50,
+              "certified": 7.3848,
+              "computed": 7.3873,
+              "delta": 0.0025
+            }
+          ],
+          "maxAbs": 0.0034,
+          "mean": -0.0018
+        },
+        {
+          "id": "srm187e",
+          "name": "Borax (Na₂B₄O₇·10H₂O), 0.01 mol/kg",
+          "source": "NIST SRM 187e certificate, Tables 1–2 (issued 30 May 2014)",
+          "covers": "boric acid / borate (charge 0/−1), I ≈ 0.02",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.02,
+          "points": [
+            {
+              "t": 5,
+              "certified": 9.3934,
+              "computed": 9.3839,
+              "delta": -0.0095
+            },
+            {
+              "t": 10,
+              "certified": 9.3328,
+              "computed": 9.3237,
+              "delta": -0.0091
+            },
+            {
+              "t": 15,
+              "certified": 9.2784,
+              "computed": 9.2693,
+              "delta": -0.0091
+            },
+            {
+              "t": 20,
+              "certified": 9.2295,
+              "computed": 9.2205,
+              "delta": -0.009
+            },
+            {
+              "t": 25,
+              "certified": 9.1855,
+              "computed": 9.1767,
+              "delta": -0.0088
+            },
+            {
+              "t": 30,
+              "certified": 9.1459,
+              "computed": 9.1378,
+              "delta": -0.0081
+            },
+            {
+              "t": 35,
+              "certified": 9.1099,
+              "computed": 9.1034,
+              "delta": -0.0065
+            },
+            {
+              "t": 37,
+              "certified": 9.0965,
+              "computed": 9.0908,
+              "delta": -0.0057
+            },
+            {
+              "t": 40,
+              "certified": 9.0772,
+              "computed": 9.0732,
+              "delta": -0.004
+            },
+            {
+              "t": 45,
+              "certified": 9.0472,
+              "computed": 9.0469,
+              "delta": -0.0003
+            },
+            {
+              "t": 50,
+              "certified": 9.0195,
+              "computed": 9.0243,
+              "delta": 0.0048
+            }
+          ],
+          "maxAbs": 0.0095,
+          "mean": -0.0059
+        },
+        {
+          "id": "srm191d",
+          "name": "NaHCO₃ 0.025 + Na₂CO₃ 0.025 mol/kg",
+          "source": "NIST SRM 191d certificate, Table 1 (issued 5 February 2025)",
+          "covers": "carbonate HCO₃⁻/CO₃²⁻ (charge −1/−2), I ≈ 0.10",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.0999,
+          "points": [
+            {
+              "t": 10,
+              "certified": 10.179,
+              "computed": 10.1612,
+              "delta": -0.0178
+            },
+            {
+              "t": 15,
+              "certified": 10.118,
+              "computed": 10.1009,
+              "delta": -0.0171
+            },
+            {
+              "t": 20,
+              "certified": 10.063,
+              "computed": 10.0462,
+              "delta": -0.0168
+            },
+            {
+              "t": 25,
+              "certified": 10.014,
+              "computed": 9.9966,
+              "delta": -0.0174
+            },
+            {
+              "t": 30,
+              "certified": 9.968,
+              "computed": 9.9518,
+              "delta": -0.0162
+            },
+            {
+              "t": 35,
+              "certified": 9.926,
+              "computed": 9.9112,
+              "delta": -0.0148
+            }
+          ],
+          "maxAbs": 0.0178,
+          "mean": -0.0167
+        },
+        {
+          "id": "srm922-923",
+          "name": "Tris 0.01667 + Tris·HCl 0.0500 mol/kg",
+          "source": "NIST SRM 922 / 923 certificate (revision of 24 May 1993; from the NIST certificate archive), page 1",
+          "covers": "cationic acid TrisH⁺/Tris (charge +1/0), I ≈ 0.05",
+          "uncertainty": 0.005,
+          "ionicStrength": 0.05,
+          "points": [
+            {
+              "t": 0,
+              "certified": 8.471,
+              "computed": 8.45,
+              "delta": -0.021
+            },
+            {
+              "t": 5,
+              "certified": 8.303,
+              "computed": 8.283,
+              "delta": -0.02
+            },
+            {
+              "t": 10,
+              "certified": 8.142,
+              "computed": 8.1228,
+              "delta": -0.0192
+            },
+            {
+              "t": 15,
+              "certified": 7.988,
+              "computed": 7.9693,
+              "delta": -0.0187
+            },
+            {
+              "t": 20,
+              "certified": 7.84,
+              "computed": 7.8219,
+              "delta": -0.0181
+            },
+            {
+              "t": 25,
+              "certified": 7.699,
+              "computed": 7.6804,
+              "delta": -0.0186
+            },
+            {
+              "t": 30,
+              "certified": 7.563,
+              "computed": 7.5444,
+              "delta": -0.0186
+            },
+            {
+              "t": 35,
+              "certified": 7.433,
+              "computed": 7.4138,
+              "delta": -0.0192
+            },
+            {
+              "t": 37,
+              "certified": 7.382,
+              "computed": 7.3629,
+              "delta": -0.0191
+            },
+            {
+              "t": 40,
+              "certified": 7.307,
+              "computed": 7.2881,
+              "delta": -0.0189
+            },
+            {
+              "t": 45,
+              "certified": 7.186,
+              "computed": 7.1673,
+              "delta": -0.0187
+            },
+            {
+              "t": 50,
+              "certified": 7.07,
+              "computed": 7.051,
+              "delta": -0.019
+            }
+          ],
+          "maxAbs": 0.021,
+          "mean": -0.0191
+        }
+      ],
+      "n": 62,
+      "maxAbs": 0.021,
+      "medianAbs": 0.0079,
+      "rms": 0.0113,
+      "withinUncertainty": 42
+    },
+    {
+      "model": "ideal",
+      "standards": [
+        {
+          "id": "srm185i",
+          "name": "Potassium hydrogen phthalate, 0.05 mol/kg",
+          "source": "NIST SRM 185i certificate, Table 1 (issued 24 July 2025)",
+          "covers": "diprotic carboxylic acid, amphoteric salt, I ≈ 0.05",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.0527,
+          "points": [
+            {
+              "t": 5,
+              "certified": 4.003,
+              "computed": 4.1788,
+              "delta": 0.1758
+            },
+            {
+              "t": 10,
+              "certified": 3.999,
+              "computed": 4.1757,
+              "delta": 0.1767
+            },
+            {
+              "t": 15,
+              "certified": 3.999,
+              "computed": 4.1757,
+              "delta": 0.1767
+            },
+            {
+              "t": 20,
+              "certified": 4.001,
+              "computed": 4.1786,
+              "delta": 0.1776
+            },
+            {
+              "t": 25,
+              "certified": 4.005,
+              "computed": 4.1844,
+              "delta": 0.1794
+            },
+            {
+              "t": 30,
+              "certified": 4.012,
+              "computed": 4.1927,
+              "delta": 0.1807
+            },
+            {
+              "t": 35,
+              "certified": 4.021,
+              "computed": 4.2034,
+              "delta": 0.1824
+            },
+            {
+              "t": 37,
+              "certified": 4.025,
+              "computed": 4.2084,
+              "delta": 0.1834
+            },
+            {
+              "t": 40,
+              "certified": 4.031,
+              "computed": 4.2164,
+              "delta": 0.1854
+            },
+            {
+              "t": 45,
+              "certified": 4.044,
+              "computed": 4.2315,
+              "delta": 0.1875
+            },
+            {
+              "t": 50,
+              "certified": 4.058,
+              "computed": 4.2486,
+              "delta": 0.1906
+            }
+          ],
+          "maxAbs": 0.1906,
+          "mean": 0.1815
+        },
+        {
+          "id": "srm186-1to1",
+          "name": "KH₂PO₄ 0.025 + Na₂HPO₄ 0.025 mol/kg",
+          "source": "NIST SRM 186-I-g / 186-II-g certificate, Table 1 (issued 23 May 2003; from the NIST certificate archive)",
+          "covers": "phosphate H₂PO₄⁻/HPO₄²⁻ (charge −1/−2), I ≈ 0.10",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.1,
+          "points": [
+            {
+              "t": 5,
+              "certified": 6.9515,
+              "computed": 7.273,
+              "delta": 0.3215
+            },
+            {
+              "t": 10,
+              "certified": 6.9229,
+              "computed": 7.2477,
+              "delta": 0.3248
+            },
+            {
+              "t": 15,
+              "certified": 6.8989,
+              "computed": 7.227,
+              "delta": 0.3281
+            },
+            {
+              "t": 20,
+              "certified": 6.8796,
+              "computed": 7.2105,
+              "delta": 0.3309
+            },
+            {
+              "t": 25,
+              "certified": 6.864,
+              "computed": 7.198,
+              "delta": 0.334
+            },
+            {
+              "t": 30,
+              "certified": 6.8526,
+              "computed": 7.1892,
+              "delta": 0.3366
+            },
+            {
+              "t": 35,
+              "certified": 6.8435,
+              "computed": 7.184,
+              "delta": 0.3405
+            },
+            {
+              "t": 37,
+              "certified": 6.8408,
+              "computed": 7.1828,
+              "delta": 0.342
+            },
+            {
+              "t": 40,
+              "certified": 6.8372,
+              "computed": 7.182,
+              "delta": 0.3448
+            },
+            {
+              "t": 45,
+              "certified": 6.8346,
+              "computed": 7.1831,
+              "delta": 0.3485
+            },
+            {
+              "t": 50,
+              "certified": 6.8331,
+              "computed": 7.1871,
+              "delta": 0.354
+            }
+          ],
+          "maxAbs": 0.354,
+          "mean": 0.3369
+        },
+        {
+          "id": "srm186-1to3.5",
+          "name": "KH₂PO₄ 0.008695 + Na₂HPO₄ 0.03043 mol/kg",
+          "source": "NIST SRM 186-I-g / 186-II-g certificate, Table 2 (issued 23 May 2003; from the NIST certificate archive)",
+          "covers": "phosphate at a 1:3.5 ratio, I ≈ 0.10",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.1,
+          "points": [
+            {
+              "t": 5,
+              "certified": 7.5026,
+              "computed": 7.817,
+              "delta": 0.3144
+            },
+            {
+              "t": 10,
+              "certified": 7.4747,
+              "computed": 7.7917,
+              "delta": 0.317
+            },
+            {
+              "t": 15,
+              "certified": 7.4511,
+              "computed": 7.7709,
+              "delta": 0.3198
+            },
+            {
+              "t": 20,
+              "certified": 7.4323,
+              "computed": 7.7544,
+              "delta": 0.3221
+            },
+            {
+              "t": 25,
+              "certified": 7.4157,
+              "computed": 7.7419,
+              "delta": 0.3262
+            },
+            {
+              "t": 30,
+              "certified": 7.4044,
+              "computed": 7.7332,
+              "delta": 0.3288
+            },
+            {
+              "t": 35,
+              "certified": 7.3956,
+              "computed": 7.7279,
+              "delta": 0.3323
+            },
+            {
+              "t": 37,
+              "certified": 7.394,
+              "computed": 7.7267,
+              "delta": 0.3327
+            },
+            {
+              "t": 40,
+              "certified": 7.3897,
+              "computed": 7.7259,
+              "delta": 0.3362
+            },
+            {
+              "t": 45,
+              "certified": 7.387,
+              "computed": 7.727,
+              "delta": 0.34
+            },
+            {
+              "t": 50,
+              "certified": 7.3848,
+              "computed": 7.7309,
+              "delta": 0.3461
+            }
+          ],
+          "maxAbs": 0.3461,
+          "mean": 0.3287
+        },
+        {
+          "id": "srm187e",
+          "name": "Borax (Na₂B₄O₇·10H₂O), 0.01 mol/kg",
+          "source": "NIST SRM 187e certificate, Tables 1–2 (issued 30 May 2014)",
+          "covers": "boric acid / borate (charge 0/−1), I ≈ 0.02",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.02,
+          "points": [
+            {
+              "t": 5,
+              "certified": 9.3934,
+              "computed": 9.4415,
+              "delta": 0.0481
+            },
+            {
+              "t": 10,
+              "certified": 9.3328,
+              "computed": 9.3818,
+              "delta": 0.049
+            },
+            {
+              "t": 15,
+              "certified": 9.2784,
+              "computed": 9.3279,
+              "delta": 0.0495
+            },
+            {
+              "t": 20,
+              "certified": 9.2295,
+              "computed": 9.2795,
+              "delta": 0.05
+            },
+            {
+              "t": 25,
+              "certified": 9.1855,
+              "computed": 9.2362,
+              "delta": 0.0507
+            },
+            {
+              "t": 30,
+              "certified": 9.1459,
+              "computed": 9.1978,
+              "delta": 0.0519
+            },
+            {
+              "t": 35,
+              "certified": 9.1099,
+              "computed": 9.164,
+              "delta": 0.0541
+            },
+            {
+              "t": 37,
+              "certified": 9.0965,
+              "computed": 9.1516,
+              "delta": 0.0551
+            },
+            {
+              "t": 40,
+              "certified": 9.0772,
+              "computed": 9.1343,
+              "delta": 0.0571
+            },
+            {
+              "t": 45,
+              "certified": 9.0472,
+              "computed": 9.1086,
+              "delta": 0.0614
+            },
+            {
+              "t": 50,
+              "certified": 9.0195,
+              "computed": 9.0866,
+              "delta": 0.0671
+            }
+          ],
+          "maxAbs": 0.0671,
+          "mean": 0.054
+        },
+        {
+          "id": "srm191d",
+          "name": "NaHCO₃ 0.025 + Na₂CO₃ 0.025 mol/kg",
+          "source": "NIST SRM 191d certificate, Table 1 (issued 5 February 2025)",
+          "covers": "carbonate HCO₃⁻/CO₃²⁻ (charge −1/−2), I ≈ 0.10",
+          "uncertainty": 0.01,
+          "ionicStrength": 0.0998,
+          "points": [
+            {
+              "t": 10,
+              "certified": 10.179,
+              "computed": 10.4801,
+              "delta": 0.3011
+            },
+            {
+              "t": 15,
+              "certified": 10.118,
+              "computed": 10.422,
+              "delta": 0.304
+            },
+            {
+              "t": 20,
+              "certified": 10.063,
+              "computed": 10.3694,
+              "delta": 0.3064
+            },
+            {
+              "t": 25,
+              "certified": 10.014,
+              "computed": 10.3218,
+              "delta": 0.3078
+            },
+            {
+              "t": 30,
+              "certified": 9.968,
+              "computed": 10.2788,
+              "delta": 0.3108
+            },
+            {
+              "t": 35,
+              "certified": 9.926,
+              "computed": 10.24,
+              "delta": 0.314
+            }
+          ],
+          "maxAbs": 0.314,
+          "mean": 0.3074
+        },
+        {
+          "id": "srm922-923",
+          "name": "Tris 0.01667 + Tris·HCl 0.0500 mol/kg",
+          "source": "NIST SRM 922 / 923 certificate (revision of 24 May 1993; from the NIST certificate archive), page 1",
+          "covers": "cationic acid TrisH⁺/Tris (charge +1/0), I ≈ 0.05",
+          "uncertainty": 0.005,
+          "ionicStrength": 0.05,
+          "points": [
+            {
+              "t": 0,
+              "certified": 8.471,
+              "computed": 8.368,
+              "delta": -0.103
+            },
+            {
+              "t": 5,
+              "certified": 8.303,
+              "computed": 8.2003,
+              "delta": -0.1027
+            },
+            {
+              "t": 10,
+              "certified": 8.142,
+              "computed": 8.0395,
+              "delta": -0.1025
+            },
+            {
+              "t": 15,
+              "certified": 7.988,
+              "computed": 7.8853,
+              "delta": -0.1027
+            },
+            {
+              "t": 20,
+              "certified": 7.84,
+              "computed": 7.7372,
+              "delta": -0.1028
+            },
+            {
+              "t": 25,
+              "certified": 7.699,
+              "computed": 7.595,
+              "delta": -0.104
+            },
+            {
+              "t": 30,
+              "certified": 7.563,
+              "computed": 7.4583,
+              "delta": -0.1047
+            },
+            {
+              "t": 35,
+              "certified": 7.433,
+              "computed": 7.3268,
+              "delta": -0.1062
+            },
+            {
+              "t": 37,
+              "certified": 7.382,
+              "computed": 7.2757,
+              "delta": -0.1063
+            },
+            {
+              "t": 40,
+              "certified": 7.307,
+              "computed": 7.2004,
+              "delta": -0.1066
+            },
+            {
+              "t": 45,
+              "certified": 7.186,
+              "computed": 7.0787,
+              "delta": -0.1073
+            },
+            {
+              "t": 50,
+              "certified": 7.07,
+              "computed": 6.9616,
+              "delta": -0.1084
+            }
+          ],
+          "maxAbs": 0.1084,
+          "mean": -0.1048
+        }
+      ],
+      "n": 62,
+      "maxAbs": 0.354,
+      "medianAbs": 0.1844,
+      "rms": 0.2387,
+      "withinUncertainty": 0
+    }
+  ]
+}

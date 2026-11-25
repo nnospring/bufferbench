@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bufferbench — buffer recipes corrected for temperature and ionic strength</title>
+<meta name="description" content="Buffer recipes and pH predictions with temperature and ionic-strength corrections, from NIST-evaluated constants, checked against NIST certified pH standards. Runs in your browser.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='9' y='3' width='14' height='4' rx='1' fill='%232a5d8f'/%3E%3Cpath d='M11 7v7L5 26a3 3 0 0 0 3 4h16a3 3 0 0 0 3-4l-6-12V7' fill='none' stroke='%232a5d8f' stroke-width='2.4' stroke-linejoin='round'/%3E%3Cpath d='M8 22h16l2 4a1.5 1.5 0 0 1-1.4 2H7.4A1.5 1.5 0 0 1 6 26z' fill='%232a5d8f'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo" aria-hidden="true">⌀</span> bufferbench <span class="ver" id="ver"></span></div>
+  <nav class="toplinks">
+    <button class="link" id="lang" type="button" aria-label="Switch language">中文</button>
+    <a class="link" id="repo" href="https://github.com/nnospring/bufferbench" rel="noopener">GitHub</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1 data-i18n="title">Buffer recipes, corrected for temperature and ionic strength</h1>
+    <p class="lede" data-i18n="lede">Constants evaluated by NIST and water properties from IAPWS. The model is tested against NIST certified pH standards, and every result says how far it has been checked.</p>
+    <p class="proof" id="proof"></p>
+    <p class="privacy" data-i18n="privacy">Everything is computed in this page. Nothing you enter leaves your device.</p>
+  </section>
+
+  <div class="tabs" role="tablist">
+    <button role="tab" class="tab" id="tab-recipe" aria-controls="panel-recipe" data-i18n="tabRecipe">Recipe</button>
+    <button role="tab" class="tab" id="tab-predict" aria-controls="panel-predict" data-i18n="tabPredict">Predict pH</button>
+    <button role="tab" class="tab" id="tab-choose" aria-controls="panel-choose" data-i18n="tabChoose">Choose a buffer</button>
+    <button role="tab" class="tab" id="tab-validation" aria-controls="panel-validation" data-i18n="tabValidation">Validation</button>
+  </div>
+
+  <!-- RECIPE -->
+  <section class="panel" id="panel-recipe" role="tabpanel" aria-labelledby="tab-recipe">
+    <form class="form" id="recipe-form" autocomplete="off">
+      <div class="grid">
+        <label class="field wide"><span data-i18n="buffer">Buffer</span>
+          <select id="r-system"></select></label>
+        <label class="field"><span data-i18n="concentration">Concentration</span>
+          <span class="unit-input"><input id="r-conc" type="number" inputmode="decimal" min="0" step="any" value="50"><select id="r-conc-unit"><option value="mM">mM</option><option value="M">M</option></select></span></label>
+        <label class="field"><span data-i18n="targetPH">Target pH</span>
+          <input id="r-ph" type="number" inputmode="decimal" step="0.01" value="7.4"></label>
+        <label class="field"><span data-i18n="useAt">Used at (°C)</span>
+          <input id="r-tuse" type="number" inputmode="decimal" step="any" value="25"></label>
+        <label class="field"><span data-i18n="prepAt">Prepared at (°C)</span>
+          <input id="r-tprep" type="number" inputmode="decimal" step="any" value="25"></label>
+        <label class="field"><span data-i18n="volume">Volume</span>
+          <span class="unit-input"><input id="r-vol" type="number" inputmode="decimal" min="0" step="any" value="1"><select id="r-vol-unit"><option value="L">L</option><option value="mL">mL</option></select></span></label>
+        <label class="field"><span data-i18n="stock">Make as</span>
+          <select id="r-stock"><option value="1">1×</option><option value="2">2×</option><option value="5">5×</option><option value="10">10×</option><option value="20">20×</option></select></label>
+      </div>
+
+      <fieldset class="method">
+        <legend data-i18n="method">Method</legend>
+        <label class="radio"><input type="radio" name="r-method" value="titrate" checked> <span data-i18n="methodTitrate">One form, titrated with strong acid or base</span></label>
+        <label class="radio"><input type="radio" name="r-method" value="mix"> <span data-i18n="methodMix">Two forms mixed, no titration</span></label>
+        <div class="grid sub" id="titrate-opts">
+          <label class="field"><span data-i18n="startForm">Start from</span><select id="r-start"></select></label>
+          <label class="field"><span data-i18n="titrant">Titrant</span><select id="r-titrant"><option value="" data-i18n="auto">automatic</option><option value="naoh">NaOH</option><option value="koh">KOH</option><option value="hcl">HCl</option></select></label>
+          <label class="field"><span data-i18n="titrantStock">Titrant stock (M)</span><input id="r-tstock" type="number" inputmode="decimal" min="0" step="any" value="1"></label>
+        </div>
+        <div class="grid sub" id="mix-opts" hidden>
+          <label class="field"><span data-i18n="formA">Acidic form</span><select id="r-formA"></select></label>
+          <label class="field"><span data-i18n="formB">Basic form</span><select id="r-formB"></select></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="additives">
+        <legend data-i18n="additives">Also in the solution (mM)</legend>
+        <div class="grid four">
+          <label class="field"><span>NaCl</span><input id="r-nacl" type="number" inputmode="decimal" min="0" step="any" value="0"></label>
+          <label class="field"><span>KCl</span><input id="r-kcl" type="number" inputmode="decimal" min="0" step="any" value="0"></label>
+          <label class="field"><span>MgCl₂</span><input id="r-mgcl2" type="number" inputmode="decimal" min="0" step="any" value="0"></label>
+          <label class="field"><span>CaCl₂</span><input id="r-cacl2" type="number" inputmode="decimal" min="0" step="any" value="0"></label>
+        </div>
+      </fieldset>
+
+      <details class="advanced">
+        <summary data-i18n="advanced">Activity model</summary>
+        <label class="field"><select id="r-model"><option value="davies">Davies</option><option value="bates-guggenheim">Bates–Guggenheim</option><option value="ideal" data-i18n="ideal">Ideal solution (Henderson–Hasselbalch)</option></select></label>
+        <p class="muted" data-i18n="modelHelp">Davies is the default: it is meant for ionic strengths up to about 0.5 mol/kg. Bates–Guggenheim is the convention that defines the pH of the standards (I ≤ 0.1). The ideal solution is what most calculators assume.</p>
+      </details>
+    </form>
+
+    <div class="result" id="recipe-result" aria-live="polite"></div>
+  </section>
+
+  <!-- PREDICT -->
+  <section class="panel" id="panel-predict" role="tabpanel" aria-labelledby="tab-predict" hidden>
+    <p class="muted" data-i18n="predictHelp">Enter what is in the solution (final concentrations). Titrants count as what was added: 20 mM HCl means 20 mmol per litre of final solution.</p>
+    <div id="p-rows" class="rows"></div>
+    <button type="button" id="p-add" class="ghost" data-i18n="addRow">+ Add substance</button>
+    <div class="grid">
+      <label class="field"><span data-i18n="prepAt">Prepared at (°C)</span><input id="p-tprep" type="number" step="any" value="25"></label>
+      <label class="field"><span data-i18n="measureAt">pH at (°C)</span><input id="p-t" type="number" step="any" value="25"></label>
+      <label class="field"><span data-i18n="model">Activity model</span><select id="p-model"><option value="davies">Davies</option><option value="bates-guggenheim">Bates–Guggenheim</option><option value="ideal" data-i18n="ideal">Ideal solution (Henderson–Hasselbalch)</option></select></label>
+    </div>
+    <div class="result" id="predict-result" aria-live="polite"></div>
+  </section>
+
+  <!-- CHOOSE -->
+  <section class="panel" id="panel-choose" role="tabpanel" aria-labelledby="tab-choose" hidden>
+    <div class="grid">
+      <label class="field"><span data-i18n="targetPH">Target pH</span><input id="c-ph" type="number" step="0.05" value="7.4"></label>
+      <label class="field"><span data-i18n="useAt">Used at (°C)</span><input id="c-t" type="number" step="any" value="25"></label>
+      <label class="field"><span data-i18n="ionicStrength">Ionic strength (mol/kg)</span><input id="c-i" type="number" step="0.01" min="0" value="0.1"></label>
+    </div>
+    <div class="result" id="choose-result" aria-live="polite"></div>
+  </section>
+
+  <!-- VALIDATION -->
+  <section class="panel" id="panel-validation" role="tabpanel" aria-labelledby="tab-validation" hidden>
+    <div id="validation"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p data-i18n-html="footer">Data: Goldberg, Kishore &amp; Lennen, <i>J. Phys. Chem. Ref. Data</i> 31, 231 (2002); NIST SRM certificates 185i, 186-g, 187e, 191d, 922/923; IAPWS SR6-08 and R11-24; CIAAW 2024 atomic weights.</p>
+  <p><span id="foot-ver"></span> · GPL-3.0 · <a href="https://github.com/nnospring/bufferbench/blob/main/docs/METHODS.md" data-i18n="methods">Methods</a> · <a href="https://github.com/nnospring/bufferbench/blob/main/docs/VALIDATION.md" data-i18n="validationReport">Validation report</a></p>
+</footer>
+
+<noscript><p class="noscript">bufferbench needs JavaScript; it runs entirely in this page.</p></noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>

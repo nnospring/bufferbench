@@ -1,0 +1,65 @@
+{
+  "name": "bufferbench",
+  "version": "0.1.0",
+  "description": "Buffer recipes and pH predictions from NIST-evaluated thermodynamic data, with temperature and ionic-strength corrections, checked against NIST certified pH standards.",
+  "keywords": [
+    "buffer",
+    "pH",
+    "biochemistry",
+    "chemistry",
+    "laboratory",
+    "Henderson-Hasselbalch",
+    "ionic strength",
+    "activity coefficient",
+    "Tris",
+    "HEPES",
+    "phosphate",
+    "PBS"
+  ],
+  "license": "GPL-3.0-only",
+  "homepage": "https://github.com/nnospring/bufferbench#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nnospring/bufferbench.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nnospring/bufferbench/issues"
+  },
+  "type": "module",
+  "bin": {
+    "bufferbench": "dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "build:web": "npm run build && node scripts/build-web.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "benchmark": "node scripts/benchmark.ts",
+    "docs": "node scripts/gen-docs.ts",
+    "serve": "node scripts/serve.ts site 4174",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

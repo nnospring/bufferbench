@@ -1,0 +1,24 @@
+name: Measured pH differs from bufferbench
+description: You made a buffer and the meter read something else.
+labels: [accuracy]
+body:
+  - type: textarea
+    id: recipe
+    attributes:
+      label: What you made
+      description: Reagents with the exact formula on the bottle (hydrate!), amounts, final volume, temperature when made up to volume. A link copied from the web app is ideal.
+    validations:
+      required: true
+  - type: textarea
+    id: measured
+    attributes:
+      label: What you measured
+      description: pH reading, temperature of the solution when read, and how the meter was calibrated (which standards, at what temperature).
+    validations:
+      required: true
+  - type: input
+    id: predicted
+    attributes:
+      label: What bufferbench predicted (and its tier)
+    validations:
+      required: true
